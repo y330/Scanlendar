@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
+    "example",
 ]
 
 MIDDLEWARE = [
@@ -94,6 +95,10 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'APP_DIRS': True,
+        'DIRS': [
+            BASE_DIR + '/Svelte/dist',
+            BASE_DIR + '/templates',
+        ],
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -203,3 +208,7 @@ BOOTSTRAP4 = {
 # Tags
 
 TAGGIT_CASE_INSENSITIVE = True
+
+STATICFILES_DIRS = [
+    BASE_DIR + '/Svelte/dist',
+]
