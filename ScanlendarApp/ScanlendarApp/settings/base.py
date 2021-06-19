@@ -170,6 +170,10 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 
+STATICFILES_DIRS = [
+    BASE_DIR + '/Svelte/dist',
+]
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
@@ -208,7 +212,3 @@ BOOTSTRAP4 = {
 # Tags
 
 TAGGIT_CASE_INSENSITIVE = True
-
-STATICFILES_DIRS = [
-    BASE_DIR + '/Svelte/dist',
-]

@@ -3,7 +3,6 @@ from django.views.generic import TemplateView
 from . import views
 
 urlpatterns = [
-    re_path(r'^.*$', TemplateView.as_view(template_name="example/index.html")),
-	path('example/', include('example.urls')),
+    re_path(r'^.*$', TemplateView.as_view(template_name="example/index.html"))
 
 ]
