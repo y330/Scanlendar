@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_marshmallow import Marshmallow
 from flask_mongoengine import MongoEngine
+from .routes import scan_api
 
 # DATABASE 
 db = MongoEngine()
@@ -22,5 +23,7 @@ def initialize_app():
 
     ma.init_app(app)
     db.init_app(app)
+
+    app.register_blueprint(scan_api, url_prefix="/api")
 
     return app
