@@ -1,5 +1,6 @@
 from . import ma 
 
+# Create serializers here
 
 class EventSchema(ma.Schema):
     class Meta:
