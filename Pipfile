@@ -7,6 +7,8 @@ verify_ssl = true
 
 [packages]
 flask-sqlalchemy = "*"
+pandas = "*"
+sklearn = "*"
 
 [requires]
 python_version = "3.9"
