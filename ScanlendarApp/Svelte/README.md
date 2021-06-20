@@ -1,38 +1,35 @@
-# create-svelte
+# SMUI SvelteKit Example
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+An example project implementing [Svelte Material UI](https://github.com/hperrin/svelte-material-ui) with [SvelteKit](https://kit.svelte.dev/).
 
-## Creating a project
+# Get it Running
 
-If you're seeing this, you've probably already done this step. Congrats!
+1. Clone the repo.
+2. `pnpm
+ install`
+3. `pnpm run dev`
+4. http://localhost:3000
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+There is a workaround that runs to prepare @material packages for Vite. Without the workaround, you will see this issue.
 
-# create a new project in my-app
-npm init svelte@next my-app
+```
+ENOENT: no such file or directory, open '.../smui-example-sveltekit/node_modules/@material/ripple/index.ts'
 ```
 
-> Note: the `@next` is temporary
+See: https://github.com/vitejs/vite/issues/2892
 
-## Developing
+# License
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Copyright 2021 Hunter Perrin
 
-```bash
-npm run dev
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+    http://www.apache.org/licenses/LICENSE-2.0
 
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.

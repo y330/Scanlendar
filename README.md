@@ -3,8 +3,7 @@
 
 ## Description
 
-Calendar PWA that uses NLP to let you type in a event, scan a paragraph or paper containing an event with OCE, or share plain text, and it will infer the calendar event and give you a Link to add it to your calendar.
-
+Calendar PWA that uses NLP to type in an event or paste a body of text containing details of an event, and Scanlendar will spit out a clean link to add the event to your calendar.
 ## Demo _Coming Soon_
 ![](2021-06-19-18-25-24.png)
 

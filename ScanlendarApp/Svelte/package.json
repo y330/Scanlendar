@@ -1,26 +1,27 @@
 {
-  "name": "Scanlendar-app",
+  "name": "smui-example-sveltekit",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
-    "preview": "svelte-kit preview",
-    "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-    "format": "prettier --write --plugin-search-dir=. ."
+    "start": "svelte-kit start",
+    "prepare": "pnpm run vite-workaround && npm run smui-theme-light && pnpm run smui-theme-dark",
+    "vite-workaround": "node _helper/vite-workaround.js",
+    "smui-theme-light": "smui-theme compile static/smui.css -i src/theme",
+    "smui-theme-dark": "smui-theme compile static/smui-dark.css -i src/theme/dark"
+  },
+  "dependencies": {
+    "@smui/button": "^4.1.0"
   },
   "devDependencies": {
+    "@material/theme": "^11.0.0",
+    "@material/typography": "^11.0.0",
+    "@sveltejs/adapter-node": "next",
     "@sveltejs/kit": "next",
-    "eslint": "^7.22.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-svelte3": "^3.2.0",
-    "prettier": "~2.2.1",
-    "prettier-plugin-svelte": "^2.2.0",
-    "svelte": "^3.34.0"
+    "sass": "^1.32.11",
+    "smui-theme": "^4.1.0",
+    "svelte": "^3.37.0",
+    "vite": "^2.2.3"
   },
-  "type": "module",
-  "dependencies": {
-    "@fontsource/fira-mono": "^4.2.2",
-    "@lukeed/uuid": "^2.0.0",
-    "cookie": "^0.4.1"
-  }
+  "type": "module"
 }

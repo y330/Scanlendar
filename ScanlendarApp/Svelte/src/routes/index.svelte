@@ -1,54 +1,23 @@
-<script context="module">
-	export const prerender = true;
+<Button on:click={() => clicked++}>
+  <Icon class="material-icons">thumb_up</Icon>
+  <Label>Click Me</Label>
+</Button>
+<p class="mdc-typography--body1">
+  {#if clicked}
+    You've clicked the button {clicked} time{clicked === 1 ? "" : "s"}.
+  {:else}
+    <span class="grayed">You haven't clicked the button.</span>
+  {/if}
+</p>
+
+<script>
+  import Button, { Label, Icon } from "@smui/button";
+
+  let clicked = 0;
 </script>
-<svelte:head>
-	<title>Home</title>
-</svelte:head>
-
-<section>
-	<h1>
-		<div class="welcome">
-			<picture>
-				<source srcset="scanlendar-transparent.webp" type="image/webp" />
-				<img src="scanlendar-transparent.png" alt="Welcome" />
-			</picture>
-		</div>
-
-		Smart Calendar Tool<br />built with SvelteKit and Django
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-
-
-</section>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		position: relative;
-		width: 100%;
-		height: 0px;
-	}
-
-	.welcome img {
-		position: relative;
-		width: 200px;
-		height: 200px;
-
-		top: 0;
-		display: block;
-	}
+  .grayed {
+    opacity: 0.6;
+  }
 </style>
