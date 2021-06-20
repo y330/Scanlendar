@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 coderedcms = "==0.20.*"
 django_sendmail_backend = "*"
+flask = "*"
+flask-marshmallow = "*"
+flask-mongoengine = "*"
 
 [dev-packages]
 
