@@ -9,6 +9,7 @@ verify_ssl = true
 flask-sqlalchemy = "*"
 pandas = "*"
 sklearn = "*"
+nltk = "*"
 
 [requires]
 python_version = "3.9"
