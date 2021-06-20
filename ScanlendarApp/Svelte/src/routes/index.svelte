@@ -1,11 +1,6 @@
 <script context="module">
 	export const prerender = true;
 </script>
-
-<script>
-	import Counter from '$lib/Counter/index.svelte';
-</script>
-
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
@@ -26,7 +21,7 @@
 		try editing <strong>src/routes/index.svelte</strong>
 	</h2>
 
-	<Counter />
+
 </section>
 
 <style>
@@ -45,14 +40,14 @@
 	.welcome {
 		position: relative;
 		width: 100%;
-		height: 100%;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
+		height: 0px;
 	}
 
 	.welcome img {
 		position: relative;
-		width: 100%;
-		height: 100%;
+		width: 200px;
+		height: 200px;
+
 		top: 0;
 		display: block;
 	}
