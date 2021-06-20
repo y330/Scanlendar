@@ -1,10 +1,13 @@
 from flask import Flask
 from flask_marshmallow import Marshmallow
-from flask_mongoengine import MongoEngine
+import os
+from flask_sqlalchemy import SQLAlchemy
 from .routes import scan_api
 
+basedir = os.path.abspath(os.path.dirname(__file__))
+
 # DATABASE 
-db = MongoEngine()
+db = SQLAlchemy()
 
 # SERIALIZER
 ma = Marshmallow()
@@ -12,11 +15,8 @@ ma = Marshmallow()
 def initialize_app():
     app = Flask(__name__)
     app.config["SECRET_KEY"] = ''
-    app.config["MONGODB_SETTINGS"] = {
-        'db': '', 
-        'host': '', 
-        'port': 0, 
-    }
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False    
 
     # Initialize Secret Key and Setup DB Config
     # Register Blueprints
