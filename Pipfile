@@ -4,7 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-coderedcms = "*"
+coderedcms = "==0.20.*"
+django_sendmail_backend = "*"
 
 [dev-packages]
 
