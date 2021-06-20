@@ -1,6 +1,40 @@
+
 <script context="module">
 	export const prerender = true;
+
+	// STATE
+	let text = ""; 
+	let event = {
+		title: "", 
+		description: "", 
+		location: "", 
+		start_date: "", 
+		end_date: "", 
+		start_time: "", 
+		end_time: ""
+	}; 
+
+	// API CALLS
+	function getCalendarScan() {
+		// Get event details from text 
+	}
+
+	function formatEventForGoogleCalendar() {
+		// Format event to fit google calendar params
+	}
+
+	function addToGoogleCalendar() {
+		// Make api call to google calendar to add event
+	}
+
+	// METHODS
+	const handleTextChange = (e) => {
+		text = e.target.value; 
+	}; 
+
 </script>
+
+
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
@@ -21,6 +55,7 @@
 		try editing <strong>src/routes/index.svelte</strong>
 	</h2>
 
+	<input on:change={handleTextChange} />
 
 </section>
 
