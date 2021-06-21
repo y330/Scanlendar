@@ -5,6 +5,8 @@
 ## Description
 
 Calendar PWA that uses NLP to type in an event or paste a body of text containing details of an event, and Scanlendar will spit out a clean link to add the event to your calendar.
+
+<a href=ScanlendarApp/nlp_model/app.py>check out our NLP</a>
 ## Demo _Coming Soon_
 ![](2021-06-19-18-25-24.png)
 
