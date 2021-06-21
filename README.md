@@ -1,5 +1,6 @@
 # Scanlendar
 
+![](static/scanlendar_500.png)
 
 ## Description
 
