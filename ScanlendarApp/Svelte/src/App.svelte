@@ -1,7 +1,7 @@
 <script context="module">
 	/*-------------------------*/
 	const our_app = "scanlendar"
-  let result = {}
+	let result = {}
 	/*------------------------*/
 
 	export const prerender = true
@@ -15,11 +15,11 @@
 		end_date: "",
 		start_time: "",
 		end_time: "",
-  }
+	}
 	// API CALLS
 	async function getCalendarScan() {
-    const res = await fetch("/home")
-    result = Object.assign(event,res.json)
+		const res = await fetch("/home")
+		result = Object.assign(event, res.json)
 
 		// Get event details from text
 	}
