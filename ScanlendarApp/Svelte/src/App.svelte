@@ -18,7 +18,8 @@
 	}
 	// API CALLS
 	async function getCalendarScan() {
-		const res = await fetch("/home")
+
+		const res = await fetch("/home", eve)
 		result = Object.assign(event, res.json)
 
 		// Get event details from text
@@ -32,6 +33,7 @@
 	// METHODS
 	const handleTextChange = (e) => {
 		text = e.target.value
+		getCalendarScan(text)
 	}
 </script>
 
@@ -71,5 +73,5 @@
 	<!-- <h5><b>Scanlendar </b> <b> is</b> avail<b>a</b>ble no<b>w</b> on thre<b>esome</b></h5> -->
 	<!-- lol -->
 	<input on:change={handleTextChange} />
-	<div color="cornflowerblue">{result}</div>
+	<div color="cornflowerblue">{result.toString}</div>
 </main>
