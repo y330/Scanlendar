@@ -5,8 +5,8 @@ import commonjs from "@rollup/plugin-commonjs"
 import livereload from "rollup-plugin-livereload"
 import { terser } from "rollup-plugin-terser"
 import svelte from "rollup-plugin-svelte-hot"
-import Hmr from "rollup-plugin-hot"
-import { scss } from "svelte-preprocess"
+import Hmr from "rollup-plugin-hot" // not used
+import { scss } from "svelte-preprocess" // not used
 /*--------------------------------------*/
 const production = !process.env.ROLLUP_WATCH
 const assetsDir = "public/assets"

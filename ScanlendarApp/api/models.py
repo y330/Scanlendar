@@ -1,9 +1,9 @@
-from . import db 
+from . import db
 
-# Create models here 
+# Create models here
 
 class Event(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key = True)
     title = db.Column(db.String(100))
     description = db.Column(db.String(250))
     location = db.Column(db.String(250))

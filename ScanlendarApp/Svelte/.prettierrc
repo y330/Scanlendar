@@ -1,8 +1,8 @@
 {
-  "semi": false,
-  "singleQuote": false,
-  "useTabs": true,
-  "svelteBracketNewLine": false,
-  "trailingComma": "all",
-  "svelteSortOrder": "scripts-options-styles-markup"
+	"semi": false,
+	"singleQuote": false,
+	"useTabs": true,
+	"svelteBracketNewLine": false,
+	"trailingComma": "all",
+	"svelteSortOrder": "scripts-options-styles-markup"
 }

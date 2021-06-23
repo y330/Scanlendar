@@ -59,7 +59,7 @@ def base():
 # Path for all the static files (compiled JS/CSS, etc.)
 
 
-@scan_api.route("/<path:path>")
+@scan_api.route("/ < path:path > ")
 def home(path):
     return send_from_directory('svelte/public', path)
 
@@ -69,7 +69,7 @@ def hello():
     return str(random.randint(0, 100))
 
 
-@scan_api.route('/home', methods=['POST'])
+@scan_api.route('/home', methods = ['POST'])
 def get_calendar_info():
     text = request.json['text']
 
