@@ -69,9 +69,7 @@
 <main>
 	<h1>hello <b>{our_app}</b> users!</h1>
 	<img src="/assets/android-chrome-512x512.png" alt="svelte_icon" />
-	<p><em>Give us your words, and we'll give you a date(calendar)</em></p>
-	<!-- <h5><b>Scanlendar </b> <b> is</b> avail<b>a</b>ble no<b>w</b> on thre<b>esome</b></h5> -->
-	<!-- lol -->
+	<p id="slogan"><em>Give us your words, and we'll give you a date(calendar)</em></p>
 	<input on:change={handleTextChange} />
 	<div color="cornflowerblue">{result.toString}</div>
 </main>
