@@ -18,8 +18,14 @@
 	}
 	// API CALLS
 	async function getCalendarScan() {
-
-		const res = await fetch("/home", eve)
+		/**
+		 * @function: 
+		 */
+		/*-------*/
+		
+		/*---need to send the text to the server before fetching.... someone figure out how to do this*/
+		/*---------*/
+		const res = await fetch("/home")
 		result = Object.assign(event, res.json)
 
 		// Get event details from text
